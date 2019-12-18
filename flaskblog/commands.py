@@ -1,7 +1,7 @@
 import click
 from flask.cli import with_appcontext
 
-from flaskblog.app import db
+from flaskblog import db
 from flaskblog.models import User, Post
 
 @click.command(name = 'create_tables')

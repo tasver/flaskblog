@@ -10,10 +10,12 @@ from flask_admin import Admin, BaseView, expose
 from flask_admin.contrib.sqla import ModelView
 from flask_ckeditor import CKEditor
 
-app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
 
-app.config.from_object('config')
+config_file='settings.py'
+app = Flask(__name__)
+#basedir = os.path.abspath(os.path.dirname(__file__))
+
+app.config.from_pyfile(config_file)
 db = SQLAlchemy(app)
 
 migrate = Migrate(app,db)
@@ -34,3 +36,4 @@ admin.add_view(views.UserAdminView(views.User, db.session))
 
 
 from flaskblog import routes
+
