@@ -13,7 +13,7 @@ from flask_ckeditor import CKEditor
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-app.config.from_object('settings')
+app.config.from_object('config')
 db = SQLAlchemy(app)
 
 migrate = Migrate(app,db)
