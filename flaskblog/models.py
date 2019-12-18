@@ -1,5 +1,5 @@
 from datetime import datetime
-from flaskblog import db, login_manager
+from flaskblog.app import db, login_manager
 from flask_login import UserMixin
 from hashlib import md5
 from flask import Flask, request, jsonify, make_response
