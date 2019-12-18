@@ -123,7 +123,7 @@ class UserAdminView(ModelView):
         self._on_model_change(form, model, True)
         self.session.commit()
 
-    form_edit_rules = ('username', 'admin', 'about',rules.Header('Reset Password'),'new_password', 'confirm')
+    form_edit_rules = ('username', 'admin', 'email', 'about',rules.Header('Reset Password'),'new_password', 'confirm')
     form_create_rules = ('username', 'admin', 'email', 'about', 'password')
 
     def update_model(self, form, model):
