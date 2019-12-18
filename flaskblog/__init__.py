@@ -10,11 +10,12 @@ from flask_admin import Admin, BaseView, expose
 from flask_admin.contrib.sqla import ModelView
 from flask_ckeditor import CKEditor
 
-
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+app.config.from_object('settings')
 db = SQLAlchemy(app)
+
 migrate = Migrate(app,db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
