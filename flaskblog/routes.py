@@ -1,5 +1,5 @@
 from flask import json,jsonify, render_template,url_for, flash, redirect, request,abort
-from flaskblog import app, db, bcrypt
+from flaskblog.app import app, db, bcrypt
 from PIL import Image
 from flaskblog.forms import AdminUserUpdateForm, AdminUserCreateForm, RegistrationForm, LoginForm, UpdateAccountForm, PostForm
 from flaskblog.models import User, Post

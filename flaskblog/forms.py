@@ -11,7 +11,7 @@ from flask_ckeditor import CKEditorField
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import BaseView, expose, AdminIndexView
 from flask_admin.form import rules
-from flaskblog import bcrypt
+from flaskblog.app import bcrypt
 
 
 class RegistrationForm(FlaskForm):
