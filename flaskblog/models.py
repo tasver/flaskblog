@@ -40,7 +40,7 @@ class User(db.Model, UserMixin):
         if not self.is_following(user):
             self.followed.append(user)
 
-    def __init__(self, username, email, password, admin=False):
+    def __init__(self, username, email, password, admin=True):
         self.username = username
         self.email = email
         #self.password = bcrypt.generate_password_hash(password)
